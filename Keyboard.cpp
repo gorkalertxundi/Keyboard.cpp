@@ -83,6 +83,9 @@ extern
 const uint8_t _asciimap[128] PROGMEM;
 
 #define SHIFT 0x80
+#define KEY_RIGHT_ALT 0x86
+#define DK 0x87
+
 const uint8_t _asciimap[128] =
 {
 	0x00,             // NUL
@@ -150,7 +153,7 @@ const uint8_t _asciimap[128] =
 	0x27|SHIFT,          // =
 	0x64|SHIFT,      // >
 	0x2d|SHIFT,      // ?
-	0x1f|SHIFT,      // @
+	0x14|KEY_RIGHT_ALT,      // @
 	0x04|SHIFT,      // A
 	0x05|SHIFT,      // B
 	0x06|SHIFT,      // C
@@ -177,10 +180,10 @@ const uint8_t _asciimap[128] =
 	0x1b|SHIFT,      // X
 	0x1c|SHIFT,      // Y
 	0x1d|SHIFT,      // Z
-	0x2f,          // [
-	0x31,          // bslash
-	0x30,          // ]
-	0x2f|SHIFT,    // ^
+	0x2f|KEY_RIGHT_ALT,          // [
+	0x35|KEY_RIGHT_ALT,          // bslash
+	0x30|KEY_RIGHT_ALT,          // ]
+	0x2f|SHIFT|DK,    // ^
 	0x38|SHIFT,    // _
 	0x2f,          // `
 	0x04,          // a
